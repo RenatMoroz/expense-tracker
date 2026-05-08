@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 
 const Income = () => {
   const [title, setTitle] = useState('');
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState('');
   const { createTransaction } = useTransactionStore();
   const { isAuth } = useAuthStore();
   const router = useRouter();
@@ -21,12 +21,12 @@ const Income = () => {
 
     await createTransaction({
       title,
-      amount,
+      amount: Number(amount),
       type: 'income',
     });
 
     setTitle('');
-    setAmount(0);
+    setAmount('');
     router.push('/');
   };
   return (
@@ -47,7 +47,7 @@ const Income = () => {
           name="amount"
           placeholder="0"
           value={amount}
-          onChange={(e) => setAmount(Number(e.target.value))}
+          onChange={(e) => setAmount(e.target.value)}
         />
         <button type="submit">Add</button>
       </form>
