@@ -1,0 +1,105 @@
+.income {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.income form {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.1);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.income h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+}
+
+.income h2:first-of-type {
+  margin-top: 0;
+}
+
+.income input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #0f172a;
+  background: #f8fafc;
+  transition: all 0.3s ease;
+}
+
+.income input:focus {
+  outline: none;
+  border-color: #16a34a;
+  box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.1);
+  background: #ffffff;
+}
+
+.income input::placeholder {
+  color: #94a3b8;
+}
+
+.income button {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(22, 163, 74, 0.2);
+}
+
+.income button:hover {
+  background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(22, 163, 74, 0.3);
+}
+
+.income button:active {
+  transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .income {
+    padding: 1.5rem 1rem;
+  }
+
+  .income form {
+    padding: 2rem;
+  }
+
+  .income input {
+    padding: 0.9rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .income button {
+    padding: 0.9rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .income {
+    padding: 3rem 2rem;
+  }
+
+  .income form {
+    padding: 3rem;
+  }
+}

@@ -1,0 +1,15 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  width: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+}

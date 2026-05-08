@@ -1,0 +1,57 @@
+.headerLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.logoMark {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.12);
+  transition: all 0.3s ease;
+}
+
+.logoMark:hover {
+  box-shadow: 0 0 0 6px rgba(22, 163, 74, 0.2);
+  transform: scale(1.1);
+}
+
+.headerTitle {
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  color: #0f172a;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.headerTitle:hover {
+  opacity: 0.8;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .headerLogo {
+    gap: 0.5rem;
+  }
+
+  .headerTitle {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .headerLogo {
+    gap: 0.9rem;
+  }
+
+  .headerTitle {
+    font-size: 1.1rem;
+  }
+}
